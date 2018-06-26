@@ -20,7 +20,8 @@ public class MainActivity extends AppCompatActivity implements MusicStoppedListe
         setContentView(R.layout.activity_main);
 
         stopButton = findViewById(R.id.stopButton);
-        stopButton.setBackgroundResource(R.mipmap.play_round);
+        //TODO Set background rersource= Play
+        stopButton.setBackgroundResource(R.mipmap.playbutton_round);
         serviceIntent = new Intent(this, MyPlayService.class);
 
         ApplicationClass.context=MainActivity.this;
@@ -30,12 +31,13 @@ public class MainActivity extends AppCompatActivity implements MusicStoppedListe
             public void onClick(View v) {
                 if (!musicPlaying) {
                     playAudio();
-
-                    stopButton.setImageResource(R.mipmap.stop_round);
+                    //TODO Main activity Image=stop
+                    stopButton.setImageResource(R.mipmap.stopbutton_round);
                     musicPlaying = true;
                 } else {
                     stopPlayService();
-                    stopButton.setImageResource(R.mipmap.play_round);
+                    //TODO Main Activity Image=play
+                    stopButton.setImageResource(R.mipmap.playbutton_round);
                     musicPlaying = false;
                 }
             }
@@ -62,7 +64,8 @@ public class MainActivity extends AppCompatActivity implements MusicStoppedListe
 
     @Override
     public void onMusicStopped() {
-        stopButton.setImageResource(R.mipmap.play_round);
+        //TODO Main Activity 2nd time Image=Play
+        stopButton.setImageResource(R.mipmap.playbutton_round);
         musicPlaying=false;
     }
 }

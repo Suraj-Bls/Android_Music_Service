@@ -9,10 +9,12 @@
     tools:context="com.careator.android_musicservice.MainActivity">
 
     <ImageView
+        android:src="@mipmap/playbutton_round"
         android:id="@+id/stopButton"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         />
+
 
 </LinearLayout>
